@@ -588,95 +588,20 @@ nav ul li a:hover {
     height: 350px;
 }
 
-.ong2 {
-    position: absolute;
-    top: 100px;
-    left: 500px;
-    width: 100%;
-    max-width: 350px;
-    height: 350px;
-    box-sizing: border-box;
-    border: 2px solid darkgreen;
-    background-color: #ffffff;
-    box-shadow: 10px 10px black;
+.description-ong p{
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
 }
 
-.ong2 img {
-    width: 100%;
-    height: 350px;
+.ong-description p{
+    color: #333333;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+
 }
 
-.ong3 {
-    position: absolute;
-    top: 100px;
-    left: 900px;
-    width: 100%;
-    max-width: 350px;
-    height: 350px;
-    box-sizing: border-box;
-    border: 2px solid darkgreen;
-    background-color: #ffffff;
-    box-shadow: 10px 10px black;
-}
-
-.ong3 img {
-    width: 100%;
-    height: 350px;
-}
-
-.ong4 {
-    position: absolute;
-    top: 650px;
-    left: 100px;
-    width: 100%;
-    max-width: 350px;
-    height: 350px;
-    box-sizing: border-box;
-    border: 2px solid darkgreen;
-    background-color: #ffffff;
-    box-shadow: 10px 10px black;
-}
-
-.ong4 img {
-    width: 100%;
-    height: 350px;
-}
-
-.ong5 {
-    position: absolute;
-    top: 650px;
-    left: 500px;
-    width: 100%;
-    max-width: 350px;
-    height: 350px;
-    box-sizing: border-box;
-    border: 2px solid darkgreen;
-    background-color: #ffffff;
-    box-shadow: 10px 10px black;
-}
-
-.ong5 img {
-    width: 100%;
-    height: 350px;
-}
-
-.ong6 {
-    position: absolute;
-    top: 650px;
-    left: 900px;
-    width: 100%;
-    max-width: 350px;
-    height: 350px;
-    box-sizing: border-box;
-    border: 2px solid darkgreen;
-    background-color: #ffffff;
-    box-shadow: 10px 10px black;
-}
-
-.ong6 img {
-    width: 100%;
-    height: 350px;
-}
 
 /*botões ongs*/
 
@@ -1041,7 +966,7 @@ nav ul li a:hover {
 }
 
 .cad-form h2 {
-    color: #209926;
+    color: #89ac8b;
 }
 
 .cad-form input {
@@ -1095,7 +1020,7 @@ nav ul li a:hover {
     box-sizing: border-box;
     box-shadow: 10px 10px black;
     border: 4px solid black;
-    background-color: #209926;
+    background-color: #a1fca4;
 }
 
 .ads1 {
@@ -1513,7 +1438,7 @@ nav ul li a:hover {
     box-sizing: border-box;
     box-shadow: 10px 10px black;
     border: 4px solid black;
-    background-color: #209926;
+    background-color: #a1fca4;
 }
 
 .ads10 {
@@ -1764,7 +1689,7 @@ nav ul li a:hover {
     max-width: 1050px;
     height: 750px;
     border: 2px solid black;
-    background-color: rgb(98, 201, 98);
+    background-color: #a1fca4;
     box-sizing: border-box;
     box-shadow: 10px 10px black;
 
@@ -1777,11 +1702,9 @@ nav ul li a:hover {
     width: 100%;
     max-width: 850px;
     height: 500px;
-    border: 2px solid black;
     box-sizing: border-box;
-    box-shadow: 10px 10px black;
     text-align: center;
-    background-image: linear-gradient(to right, #209926, #35bfac);
+
 }
 
 .pronto h1 {
