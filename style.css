@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Danfo&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
     padding: 0px;
     margin: 0px;
@@ -17,15 +19,19 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #ffffff;
     align-items: center;
+    border-bottom: 2px solid rgb(38, 122, 80);
+    padding: 0 20px;
 }
 
 a {
     color: #fff;
     text-decoration: none;
     font-size: 15px;
+    font-family: fantasy;
+    opacity: 0.8;
 
 }
 
@@ -70,7 +76,6 @@ nav ul li a:hover {
     width: 100%;
     background-color: #fff;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -89,11 +94,18 @@ nav ul li a:hover {
     background-size: cover;
 }
 
-.bannerdiv h2 {
+.conteudobannerdiv{
+    width:100%;
+    max-width: 600px;
+    height:500px;
+}
+
+.conteudobannerdiv h2{
     padding: 0;
-    line-height: 0;
+    line-height: normal;
     margin-left: 22px;
-    font-size: 32px;
+    font-size: 28px;
+    font-family: fantasy;
 }
 
 .bannerdiv img {
@@ -222,7 +234,7 @@ nav ul li a:hover {
 .rodapebox {
     width: 100%;
     height: auto;
-    background-color: #62c962;
+    background-color: #4b974b;
     box-sizing: border-box;
     flex-shrink: 0;
     /* Evita que o rodapé diminua em tamanho */
@@ -249,6 +261,7 @@ nav ul li a:hover {
 .caixasrodape p {
     color: #000000;
     align-items: center;
+    font-family:Arial, Helvetica, sans-serif;
 
 }
 
@@ -290,6 +303,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .contato-item img {
@@ -299,6 +313,7 @@ nav ul li a:hover {
 
 .contato-item a {
     color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .direitoscopyright {
@@ -307,17 +322,16 @@ nav ul li a:hover {
 
 /* PAGINA SOBRE */
 
-/* -----------------------PAGINA SOBRE---------------------- */
+/* -----------------------PAGINA QUEM SOMOS---------------------- */
 
 .boxprincipal {
     width: 100%;
-    border-left: 2px solid grey;
-    border-right: 2px solid grey;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .caixasobre {
@@ -328,11 +342,11 @@ nav ul li a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
 }
 
 .caixasobre h1 {
     color: #095a0d;
+    font-family:fantasy;
 }
 
 .caixasobre div {
@@ -340,7 +354,7 @@ nav ul li a:hover {
 }
 
 .caixasobre .description {
-    padding: 15px;
+    padding: 2px;
     font-size: 12px;
 }
 
@@ -356,6 +370,8 @@ nav ul li a:hover {
     color: #333333;
     line-height: 24px;
     text-align: justify;
+    font-family:fantasy;
+    opacity:0.9;
 }
 
 .storysobre {
@@ -457,61 +473,43 @@ nav ul li a:hover {
 .botaologinpagesobre:hover {
     box-shadow: 2px 2px #095a0d;
 }
-
-
 /*----------------------------------faq page-----------------------------*/
 
-.faqsessaoprincipal {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(98, 201, 98);    
-}
-
-.faqsessao1 {
-    width: 100%;
-    /* border: 2px solid grey;*/
-    box-sizing: border-box;
-    text-align: center;
-    background-color: #ffffff;
-}
-
 .faqsessao1 h1 {
-    font-size: 26px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.perguntas {
+.accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
     background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    flex-wrap: wrap;
-    padding: 22px;
-    justify-content: center;
 }
 
-.perguntas p {
-    text-align: justify;
-}
-
-.card-duvida {
-    width: 300px;
-    height: auto;
+.accordion-header {
+    background-color: #e9ecef;
+    border-bottom: 1px solid #dee2e6;
     padding: 10px;
-    border-radius: 12px;
-    background-color: #CFCFCF;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    border-radius: 5px 5px 0 0;
 }
 
-.card-duvida h2 {
-    font-size: 20px;
-    color: #095a0d;
+.accordion-button {
+    background-color: transparent;
+    color: #495057;
+    font-weight: bold;
 }
 
-.card-duvida p {
-    color: #333333;
+.accordion-button:not(.collapsed) {
+    background-color: #e9ecef;
+    color: #343a40;
+}
+
+.accordion-body {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 0 0 5px 5px;
 }
 
 /*-----------------------------------------------------Página das ongs--------------------------------------------*/
@@ -615,6 +613,7 @@ nav ul li a:hover {
 }
 
 .botaoong1:hover {    
+    opacity:0.8;
     box-shadow: 5px 5px black;
 
 }
@@ -868,36 +867,31 @@ nav ul li a:hover {
     height: 100%;
 }
 
-/****-----------------------------------PAGINA DE LOGIN----------------------------*******/
-.login3d {
-    position: absolute;
-    top: 250px;
-    width: 100%;
-    max-width: 600px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 400px;
-    background-color: #50f072;
-    border: 2px solid black;
-    box-shadow: 12px 12px black;
-    padding: 25px;
+.btn:hover{
+    cursor: pointer;
+    opacity:0.8;
 }
 
+/****-----------------------------------PAGINA DE LOGIN----------------------------*******/
 .boxlogin {
-    position: absolute;
+    position: relative;
     top: 80px;
-    left: 120px;
+    left: 250px;
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
+    height:400px;
     box-sizing: border-box;
     border: 2px solid black;
     box-shadow: 12px 12px black;
     background-color: #ffffff;
+    align-items: center;
+    text-align: center;
 
 }
 
 .login-form {
     text-align: center;
+    
 }
 
 .login-form h2 {
@@ -948,8 +942,8 @@ nav ul li a:hover {
 
 /*********PAGINA DE CADASTRO------------------------------------------******************/
 .cadastro3d {
-    position: absolute;
-    top: 250px;
+    position: relative;
+    top: 150px;
     width: 100%;
     max-width: 600px;
     left: 50%;
@@ -1012,10 +1006,11 @@ nav ul li a:hover {
 /*-------------------------------------anúncios page 1--------------*/
 
 .anunciosmain {
-    position: absolute;
+    position: relative;
+    top:10px;
     left: 20px;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1100px;
     height: 2180px;
     box-sizing: border-box;
     box-shadow: 10px 10px black;
@@ -1141,9 +1136,6 @@ nav ul li a:hover {
     background-color: #ffffff;
 }
 
-
-
-
 .comment1 {
     position: absolute;
     top: 20px;
@@ -1157,6 +1149,11 @@ nav ul li a:hover {
     background-color: #ffffff;
 }
 
+.comment1 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
+}
+
 .comment2 {
     position: absolute;
     top: 240px;
@@ -1168,6 +1165,11 @@ nav ul li a:hover {
     border: 2px solid black;
     box-shadow: 10px 10px black;
     background-color: #ffffff;
+}
+
+.comment2 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
 }
 
 .comment3 {
@@ -1184,6 +1186,11 @@ nav ul li a:hover {
     background-color: #ffffff;
 }
 
+.comment3 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
+}
+
 .comment4 {
     position: absolute;
     top: 700px;
@@ -1195,6 +1202,11 @@ nav ul li a:hover {
     border: 2px solid black;
     box-shadow: 10px 10px black;
     background-color: #ffffff;
+}
+
+.comment4 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
 }
 
 .comment5 {
@@ -1210,6 +1222,11 @@ nav ul li a:hover {
     background-color: #ffffff;
 }
 
+.comment5 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
+}
+
 .comment6 {
     position: absolute;
     top: 1140px;
@@ -1221,6 +1238,11 @@ nav ul li a:hover {
     border: 2px solid black;
     box-shadow: 10px 10px black;
     background-color: #ffffff;
+}
+
+.comment6 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
 }
 
 .comment7 {
@@ -1236,6 +1258,11 @@ nav ul li a:hover {
     background-color: #ffffff;
 }
 
+.comment7 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
+}
+
 .comment8 {
     position: absolute;
     top: 1600px;
@@ -1249,6 +1276,11 @@ nav ul li a:hover {
     background-color: #ffffff;
 }
 
+.comment8 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
+}
+
 .comment9 {
     position: absolute;
     top: 1820px;
@@ -1260,6 +1292,11 @@ nav ul li a:hover {
     border: 2px solid black;
     box-shadow: 10px 10px black;
     background-color: #ffffff;
+}
+
+.comment9 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
 }
 
 .botaoproxanterior {
@@ -1296,7 +1333,13 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 10px 10px black;
     cursor: pointer;
+}
 
+.doar1:hover{
+    opacity: 0.9;
+    border: 2px solid rgb(4, 55, 4);
+    color:black;
+    transform: scale(1.4);
 }
 
 .doar2 {
@@ -1312,7 +1355,13 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 10px 10px black;
     cursor: pointer;
+}
 
+.doar2:hover{
+    opacity: 0.9;
+    border: 2px solid rgb(4, 55, 4);
+    color:black;
+    transform: scale(1.4);
 }
 
 .doar3 {
@@ -1328,7 +1377,13 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 10px 10px black;
     cursor: pointer;
+}
 
+.doar3:hover{
+    opacity: 0.8;
+    border: 2px solid rgb(4, 55, 4);
+    color:black;
+    transform: scale(1.4);
 }
 
 .doar4 {
@@ -1344,7 +1399,13 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 10px 10px black;
     cursor: pointer;
+}
 
+.doar4:hover{
+    opacity: 0.8;
+    border: 2px solid rgb(4, 55, 4);
+    color:black;
+    transform: scale(1.4);
 }
 
 .doar5 {
@@ -1360,7 +1421,13 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 10px 10px black;
     cursor: pointer;
+}
 
+.doar5:hover{
+    opacity: 0.8;
+    border: 2px solid rgb(4, 55, 4);
+    color:black;
+    transform: scale(1.4);
 }
 
 .doar6 {
@@ -1376,7 +1443,13 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 10px 10px black;
     cursor: pointer;
+}
 
+.doar6:hover{
+    opacity: 0.8;
+    border: 2px solid rgb(4, 55, 4);
+    color:black;
+    transform: scale(1.4);
 }
 
 .doar7 {
@@ -1392,7 +1465,13 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 10px 10px black;
     cursor: pointer;
+}
 
+.doar7:hover{
+    opacity: 0.8;
+    border: 2px solid rgb(4, 55, 4);
+    color:black;
+    transform: scale(1.4);
 }
 
 .doar8 {
@@ -1408,7 +1487,13 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 10px 10px black;
     cursor: pointer;
+}
 
+.doar8:hover{
+    opacity: 0.8;
+    border: 2px solid rgb(4, 55, 4);
+    color:black;
+    transform: scale(1.4);
 }
 
 .doar9 {
@@ -1424,7 +1509,13 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 10px 10px black;
     cursor: pointer;
+}
 
+.doar9:hover{
+    opacity: 0.8;
+    border: 2px solid rgb(4, 55, 4);
+    color:black;
+    transform: scale(1.4);
 }
 
 /*-------------------------------------anúncios page 2--------------*/
@@ -1575,6 +1666,11 @@ nav ul li a:hover {
     background-color: #ffffff;
 }
 
+.comment10 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
+}
+
 .comment11 {
     position: absolute;
     top: 240px;
@@ -1586,6 +1682,11 @@ nav ul li a:hover {
     border: 2px solid black;
     box-shadow: 10px 10px black;
     background-color: #ffffff;
+}
+
+.comment11 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
 }
 
 .comment12 {
@@ -1601,6 +1702,11 @@ nav ul li a:hover {
     background-color: #ffffff;
 }
 
+.comment12 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
+}
+
 .comment13 {
     position: absolute;
     top: 700px;
@@ -1612,6 +1718,11 @@ nav ul li a:hover {
     border: 2px solid black;
     box-shadow: 10px 10px black;
     background-color: #ffffff;
+}
+
+.comment13 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
 }
 
 .comment14 {
@@ -1627,6 +1738,11 @@ nav ul li a:hover {
     background-color: #ffffff;
 }
 
+.comment14 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
+}
+
 .comment15 {
     position: absolute;
     top: 1140px;
@@ -1638,6 +1754,11 @@ nav ul li a:hover {
     border: 2px solid black;
     box-shadow: 10px 10px black;
     background-color: #ffffff;
+}
+
+.comment15 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
 }
 
 .comment16 {
@@ -1653,6 +1774,11 @@ nav ul li a:hover {
     background-color: #ffffff;
 }
 
+.comment16 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
+}
+
 .comment17 {
     position: absolute;
     top: 1600px;
@@ -1666,6 +1792,11 @@ nav ul li a:hover {
     background-color: #ffffff;
 }
 
+.comment17 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
+}
+
 .comment18 {
     position: absolute;
     top: 1820px;
@@ -1677,6 +1808,11 @@ nav ul li a:hover {
     border: 2px solid black;
     box-shadow: 10px 10px black;
     background-color: #ffffff;
+}
+
+.comment18 p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:justify;
 }
 
 /*-----------------------------Página de doação----------------------------------*/
@@ -1743,4 +1879,3101 @@ nav ul li a:hover {
     justify-content: center;
 }
 
-@media only screen and (max-width:700) {}
+/*------------------------------profile page ----------------------------------*/
+
+.logout:hover {
+    opacity: 0.8;
+    background-color: red;
+    color: white;
+}
+
+.containerprofile {
+    position:relative;
+    top:20px;
+    left:150px;
+    width:100%;
+    max-width:200px;
+    height:200px;
+    background-color: #fdfdfd;
+    border: 2px solid grey;
+    box-sizing: border-box;
+    box-shadow: 10px 10px black;
+}
+
+.containerprofile img{
+    width:100%;
+}
+
+.infoaccount {
+    position: relative;
+    top: -180px;
+    left:400px;
+    width:100%;
+    max-width:800px;
+    height:400px;
+    background-color: #e0e0e0;
+    box-shadow: 10px 10px black;
+    border: 2px solid grey;
+    box-sizing: border-box;
+}
+
+.barra{
+    position:relative;
+    top:220px;
+    width:100%;
+    max-width:350px;
+    background-color: black;
+    height:15px;
+}
+
+.doacao-back {
+    position:absolute;
+    top:550px;
+    background-color: #f44336;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.doacao-back:hover {
+    background-color: #b42d2b;
+    cursor: pointer;
+}
+
+.userdate{
+    position:relative;
+    top:32px;
+    left: 150px;
+    width:100%;
+    max-width:200px;
+    background-color:white;
+    border:2px solid black;
+    box-shadow: 10px 10px black;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.accnome{
+    position: absolute;
+    top:20px;
+    left:20px;
+    background-color: white;
+    width:100%;
+    max-width:300px;
+    height:50px;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    border: 2px solid;
+    box-sizing: border-box;
+    box-shadow: 3px 3px black;
+    align-items: center;
+    justify-content: center;
+}
+
+.accemail{
+    position: absolute;
+    top:85px;
+    left:20px;
+    background-color: white;
+    width:100%;
+    max-width:300px;
+    height:50px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    border: 2px solid;
+    box-sizing: border-box;
+    box-shadow: 3px 3px black;
+}
+
+.acctel{
+    position: absolute;
+    top:150px;
+    left:20px;
+    background-color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    width:100%;
+    max-width:300px;
+    height:50px;
+    text-align: center;
+    border: 2px solid;
+    box-sizing: border-box;
+    box-shadow: 3px 3px black;
+}
+
+.doacaohistorico {
+    position:absolute;
+    right:15px;
+    width:100%;
+    max-width:400px;
+    height:350px;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+    font-family:fantasy;
+}
+
+.doacaohistorico h4{
+    text-align: center;
+    color:#f2392c
+}
+
+.doacaohistorico h5{
+    margin-left:60px;
+    color:#000f17
+}
+
+.doacaopassada {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    max-width: 300px;
+    width:100%;
+    height:200px;
+    background-color: #28a745;
+}
+
+.doacaopassada img{
+    width:100%;
+    height:200px;
+}
+
+/***--------------------------------Formulario-------------------***/
+.doacao-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doacao-container {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    max-width: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 600px;
+    background-color: #ffffff;
+    border: 2px solid black;
+    box-shadow: 10px 10px black;
+    padding: 25px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.doacao-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.doacao-input, .doacao-submit, .doacao-back {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.doacao-submit {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 17%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.doacao-submit:hover {
+    background-color: #45a049;
+}
+
+.doacao-back {
+    background-color: #f44336;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.doacao-back:hover {
+    background-color: #b42d2b;
+}
+
+/*****************DOAÇÂO FINALIADA*****************/
+.card {
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid #000000;
+}
+
+.alert {
+    margin: 20px 0;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    box-shadow: 5px 5px black;
+}
+
+
+/*--------------//////---------------PRIMEIRO MEDIA QUERY-------------////////*/
+
+@media only screen and (min-width:601px) and (max-width:900px){
+
+    header {
+        width:100%;
+        height:266px;
+    }
+    nav {
+        flex-direction: column;
+        justify-content: space-around;
+        position: relative;
+        height:285px;
+        top: 0;
+        left: 0;
+    }
+
+    .nav-list { 
+        width:100%;
+        margin-top: -5px;
+        flex-direction: column;
+    }
+
+    /*-----------------------------------PAGINA INICIAL---------------------------------*/
+
+    .conteudobannerdiv h2{
+        font-size:20px;
+    }
+
+    .bannerdiv p {
+        font-size: 20px;
+        max-width: 240px;
+        }
+
+    .ad {
+        flex-direction: column;
+    }
+
+    /*------------------------- QUEM SOMOS --------------------------*/
+
+    .boxprincipal {
+        position: relative;
+        width: 100%;
+        max-width:99.9%;
+        
+    }
+    
+    .caixasobre {
+        width: 100%;
+        max-width: 880px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .caixasobre div{
+        width: 100%;
+        max-width: 880px;
+    }
+    
+    .description p{
+        font-size: 15px;
+    }
+
+    /*---------------------------/////////pagina das ongs---------------------//////-------*/
+
+.container{
+    width:100%;
+
+}
+
+.ong-header{
+    width:100%;
+}
+
+.description-ong{
+    width: 100%;
+}
+
+.description-ong h1{
+    width: 100%;
+}
+
+.description-ong p{
+    font-size: 15px;
+}
+
+.ong-description{
+    width: 100%;
+}
+
+/*-------------------------------------------------------PAGINA DO FAQ--------------------------------------------------------------*/
+
+.faqsessao1{
+    position: relative;
+    top:25px;
+}
+
+/*-----------------------------------PAGINA DE LOGIN---------------------------------*/
+
+.boxlogin{
+    position: relative;
+    left:0px;
+    transform: translateX(2%); 
+    width:100%;
+    max-width: 92%;
+    padding: 0px;
+    margin:0px;
+}
+
+/*-----------------------------------PAGINA DE CADASTRO----------------------------------------*/
+
+.cadastro3d {
+    position: relative;
+    top:50px;
+    width:100%;
+    max-width:90%;
+}
+
+/*----------------------------------PAGINA PROFILE----------------------------*/
+
+.containerprofile {
+    position: relative;
+    left:20px;
+}
+
+.userdate{
+    position: relative;
+    left:20px;
+}
+
+.infoaccount{
+    position: relative;
+    left:250px;
+    width: 100%;
+    max-width:68%;
+    height:650px;
+}
+
+.barra {
+    width:100%;
+    max-width: 600px;
+}
+
+.doacaohistorico {
+    position: absolute;
+    top:250px;
+    left:20px;
+}
+
+.doacaopassada h5{
+    padding:0px;
+    margin: 5px;
+    margin-left: 25px;
+}
+
+/*-----------------------------------PAGINA DE ANUNCIOS 1  E 2---------------------------------*/
+
+.anunciosmain {
+    position: relative;
+    top:15px;
+    left:2px;
+    width:95%;
+    height:2000px;
+}
+
+.anunciosmain2 {
+    position: relative;
+    top:15px;
+    left:2px;
+    width:95%;
+}
+
+.botaoproxanterior{
+    position: absolute;
+    height:1.5%;
+    top:1980px;
+    left:455px;
+    text-align: center;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.botaoproxanterior h5{
+    margin: 0px;
+}
+.ads1 {
+    position:relative;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads1 img{
+    width:100%;
+    height:100%;
+}
+
+.ads2 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads2 img{
+    width:100%;
+    height:100%;
+}
+
+.ads3 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads3 img{
+    width:100%;
+    height:100%;
+}
+
+.ads4 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads4 img{
+    width:100%;
+    height:100%;
+}
+
+.ads5 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads5 img{
+    width:100%;
+    height:100%;
+}
+
+.ads6 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads6 img{
+    width:100%;
+    height:100%;
+}
+
+.ads7 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads7 img{
+    width:100%;
+    height:100%;
+}
+
+.ads8 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+.ads8 img{
+    width:100%;
+    height:100%;
+}
+
+.ads9 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads9 img{
+    width:100%;
+    height:100%;
+}
+
+.ads10 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads10 img{
+    width:100%;
+    height:100%;
+}
+
+.ads11 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads11 img{
+    width:100%;
+    height:100%;
+}
+
+.ads12 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads12 img{
+    width:100%;
+    height:100%;
+}
+
+.ads13 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads13 img{
+    width:100%;
+    height:100%;
+}
+
+.ads14 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads14 img{
+    width:100%;
+    height:100%;
+}
+
+.ads15 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads14 img{
+    width:100%;
+    height:100%;
+}
+
+.ads16 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads16 img{
+    width:100%;
+    height:100%;
+}
+
+.ads17 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads17 img{
+    width:100%;
+    height:100%;
+}
+
+.ads18 {
+    position:absolute;
+    left:30px;
+    width:100%;
+    height:8%;
+}
+
+.ads18 img{
+    width:100%;
+    height:100%;
+}
+
+.comment1 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment1 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment2 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment2 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment3 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment3 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment4 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment4 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment5 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment5 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment6 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment6 p{
+    text-align: center;
+    font-size: 11px;
+}
+
+.comment7 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment7 p{
+    text-align: center;
+    font-size: 14px;
+}
+
+.comment8 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment8 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment9 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    height:8.2%;
+    text-align: center;
+}
+
+.comment9 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment10 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment10 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment11 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment11 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment12 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment12 p{
+    text-align: center;
+    font-size: 11px;
+}
+
+.comment13 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment13 p{
+    text-align: center;
+    font-size: 13px;
+}
+
+.comment14 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment14 p{
+    text-align: center;
+    font-size: 14px;
+}
+
+.comment15 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment15 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment16 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment16 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment17 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment17 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment18 {
+    position: absolute;
+    left:270px;
+    width:50%;
+    text-align: center;
+}
+
+.comment18 p{
+    text-align: center;
+    font-size: 10px;
+}
+
+.doar1{
+    position:absolute;
+    top:175px;
+    left:180px;
+}
+
+.doar2{
+    position:absolute;
+    top:385px;
+    left:180px;
+}
+
+.doar3{
+    position:absolute;
+    top:625px;
+    left:180px;
+}
+
+.doar4{
+    position:absolute;
+    top:845px;
+    left:180px;
+}
+
+.doar5{
+    position:absolute;
+    top:1080px;
+    left:180px;
+}
+
+.doar6{
+    position:absolute;
+    top:1300px;
+    left:180px;
+}
+
+.doar7{
+    position:absolute;
+    top:1540px;
+    left:180px;
+}
+
+.doar8{
+    position:absolute;
+    top:1760px;
+    left:180px;
+}
+
+.doar9{
+    position:absolute;
+    top:1970px;
+    left:180px;
+}
+
+/*-----------------------------------PAGINA DE FORMULARIO--------------------------------------------*/
+
+.doacao-container{
+    width:100%;
+    max-width:80%;
+    left:0px;
+    transform: translateX(5%);
+}
+
+.doacao-submit {
+    position:relative;
+    width:15%;
+    left:50%;
+}
+
+.doacao-back{
+    top:480px;
+    left:20%;
+    width:15%;
+    height:38px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+}
+
+/*-----------/////////---------SEGUNDO MEDIA QUERY --------------///////////////-------*/
+
+@media only screen and (min-width:501px) and (max-width:600px){
+    header {
+        width:100%;
+        height:266px;
+    }
+    nav {
+        flex-direction: column;
+        justify-content: space-around;
+        position: relative;
+        height: 285px;
+        top: 0;
+        left: 0;
+    }
+
+    .nav-list { 
+        width:100%;
+        margin-top: -5px;
+        flex-direction: column;
+    }
+
+      /*-----------------------------------PAGINA INICIAL---------------------------------*/
+
+    .conteudobannerdiv p{
+        font-size: 20px;
+        }
+    
+    .bannerdiv p {
+        max-width: 190px;
+        }
+    .ad {
+    flex-direction: column;
+}
+
+/*--------------------------------------/////////FOOTER/////------------*/
+.rodape {
+    width:100%;
+    
+}
+
+.contato-item a {
+    font-size: 12px;
+   }
+
+   .caixasrodape p{
+    font-size: 12px;
+   }
+
+
+/*------------------------- QUEM SOMOS --------------------------*/
+
+.boxprincipal {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+.caixasobre {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.caixasobre div{
+    width: 100%;
+    max-width: 100%;
+}
+
+.description p{
+    font-size: 15px;
+}
+
+/*---------------------------/////////pagina das ongs---------------------//////-------*/
+
+.container{
+    width:100%;
+
+}
+
+.ong-header{
+    width:100%;
+}
+
+.description-ong{
+    width: 100%;
+}
+
+.description-ong h1{
+    width: 100%;
+}
+
+.description-ong p{
+    font-size: 15px;
+}
+
+.ong-description{
+    width: 100%;
+}
+
+
+/*-------------------------------------------------------PAGINA DO FAQ--------------------------------------------------------------*/
+
+.faqsessao1{
+    position: relative;
+    top:25px;
+}
+
+/*-----------------------------------PAGINA DE LOGIN---------------------------------*/
+
+.boxlogin{
+    position: relative;
+    left:0px;
+    transform: translateX(4%); 
+    width:100%;
+    max-width: 90%;
+    padding: 0px;
+    margin:0px;
+}
+
+/*-----------------------------------PAGINA DE CADASTRO----------------------------------------*/
+
+.cadastro3d {
+    position: relative;
+    top:50px;
+    width:100%;
+    max-width:90%;
+}
+
+    /*----------------------------------PAGINA PROFILE----------------------------*/
+
+.containerprofile {
+    position: relative;
+    left:150px;
+    width:100%;
+    max-width: 60%;
+    height:100%;
+    
+}
+
+.userdate{
+    position: relative;
+    left:150px;
+    top:50px;
+    width:100%;
+    max-width:60%;
+}
+
+.infoaccount{
+    position: relative;
+    top:80px;
+    left:120px;
+    width: 100%;
+    max-width:70%;
+    height:800px;
+}
+
+.barra {
+    width:100%;
+    max-width: 500px;
+}
+
+.doacaohistorico {
+    position: relative;
+    width:100%;
+    max-width: 90%;
+    top:250px;
+    left:20px;
+}
+
+.doacaopassada {
+    width:100%;
+    max-width:80%;
+}
+
+.doacaopassada h5{
+    font-size: 13px;
+    text-align: baseline;
+    margin-left:20px;
+    margin-top:10px;
+}
+/*-----------------------------------PAGINA DE ANUNCIOS 1  E 2---------------------------------*/
+
+.anunciosmain {
+    position: relative;
+    top:5px;
+    left:2px;
+    width:98%;
+    height:2000px;
+}
+
+.anunciosmain2 {
+    position: relative;
+    top:5px;
+    left:2px;
+    width:95%;
+}
+
+.botaoproxanterior{
+    position: absolute;
+    height:2%;
+    top:1980px;
+    left:400px;
+    text-align: center;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.botaoproxanterior h5{
+    margin: 0px;
+}
+.ads1 {
+    position:relative;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads1 img{
+    width:100%;
+    height:100%;
+}
+
+.ads2 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads2 img{
+    width:100%;
+    height:100%;
+}
+
+.ads3 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads3 img{
+    width:100%;
+    height:100%;
+}
+
+.ads4 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads4 img{
+    width:100%;
+    height:100%;
+}
+
+.ads5 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads5 img{
+    width:100%;
+    height:100%;
+}
+
+.ads6 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads6 img{
+    width:100%;
+    height:100%;
+}
+
+.ads7 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads7 img{
+    width:100%;
+    height:100%;
+}
+
+.ads8 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+.ads8 img{
+    width:100%;
+    height:100%;
+}
+
+.ads9 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads9 img{
+    width:100%;
+    height:100%;
+}
+
+.ads10 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads10 img{
+    width:100%;
+    height:100%;
+}
+
+.ads11 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads11 img{
+    width:100%;
+    height:100%;
+}
+
+.ads12 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads12 img{
+    width:100%;
+    height:100%;
+}
+
+.ads13 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads13 img{
+    width:100%;
+    height:100%;
+}
+
+.ads14 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads14 img{
+    width:100%;
+    height:100%;
+}
+
+.ads15 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads14 img{
+    width:100%;
+    height:100%;
+}
+
+.ads16 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads16 img{
+    width:100%;
+    height:100%;
+}
+
+.ads17 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads17 img{
+    width:100%;
+    height:100%;
+}
+
+.ads18 {
+    position:absolute;
+    left:5px;
+    width:100%;
+    height:8%;
+}
+
+.ads18 img{
+    width:100%;
+    height:100%;
+}
+
+.comment1 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment1 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment2 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment2 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment3 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment3 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment4 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment4 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment5 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment5 p{
+    text-align: center;
+    font-size: 11.5px;
+}
+
+.comment6 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment6 p{
+    text-align: center;
+    font-size: 10.3px;
+}
+
+.comment7 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment7 p{
+    text-align: center;
+    font-size: 14px;
+}
+
+.comment8 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment8 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment9 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    height:8.2%;
+    text-align: center;
+}
+
+.comment9 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment10 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment10 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment11 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment11 p{
+    text-align: center;
+    font-size: 10.2px;
+}
+
+.comment12 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment12 p{
+    text-align: center;
+    font-size: 10.4px;
+}
+
+.comment13 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment13 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment14 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment14 p{
+    text-align: center;
+    font-size: 14px;
+}
+
+.comment15 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment15 p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.comment16 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment16 p{
+    text-align: center;
+    font-size: 11.5px;
+}
+
+.comment17 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment17 p{
+    text-align: center;
+    font-size: 11px;
+}
+
+.comment18 {
+    position: absolute;
+    left:220px;
+    width:50%;
+    text-align: center;
+}
+
+.comment18 p{
+    text-align: center;
+    font-size: 10px;
+}
+
+.doar1{
+    position:absolute;
+    top:190px;
+    left:130px;
+}
+
+.doar2{
+    position:absolute;
+    top:415px;
+    left:130px;
+}
+
+.doar3{
+    position:absolute;
+    top:655px;
+    left:130px;
+}
+
+.doar4{
+    position:absolute;
+    top:875px;
+    left:130px;
+}
+
+.doar5{
+    position:absolute;
+    top:1092px;
+    left:130px;
+}
+
+.doar6{
+    position:absolute;
+    top:1320px;
+    left:130px;
+}
+
+.doar7{
+    position:absolute;
+    top:1553px;
+    left:130px;
+}
+
+.doar8{
+    position:absolute;
+    top:1770px;
+    left:130px;
+}
+
+.doar9{
+    position:absolute;
+    top:1980px;
+    left:130px;
+}
+
+/*-----------------------------------PAGINA DE FORMULARIO--------------------------------------------*/
+
+.doacao-container{
+    width:100%;
+    max-width:80%;
+    left:0px;
+    transform: translateX(5%);
+}
+
+.doacao-submit {
+    position:relative;
+    left:50%;
+}
+
+.doacao-back{
+    top:508px;
+    left:20%;
+    height:38px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0px;
+}
+}
+
+
+/*-----------/////////---------TERCEIRO MEDIA QUERY --------------///////////////-------*/
+
+@media only screen and (min-width:300px) and (max-width:500px){
+    header {
+       width:100%;
+       height:266px;
+   }
+   nav {
+       flex-direction: column;
+       justify-content: space-around;
+       position: relative;
+       top: 0;
+       left: 0;
+   }
+
+   .nav-list { 
+       width:100%;
+       flex-direction: column;
+       padding: 0px;
+   }
+
+   /*-----------------------------------PAGINA INICIAL---------------------------------*/
+
+   .conteudobannerdiv h2{
+    font-size: 20px;
+    }
+
+    .bannerdiv p {
+        font-size: 18px;
+        max-width: 190px;
+    }
+
+   .ad {
+       flex-direction: column;
+   }
+
+   /*--------------------------------------/////////FOOTER/////------------*/
+   .rodape {
+       width:100%;
+       
+   }
+
+   .rodapebox {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+  
+
+   /*------------------------- QUEM SOMOS --------------------------*/
+
+
+.caixasobre {
+    display: flex;
+    flex-direction: column;
+}
+
+.caixasobre div{
+    width: 100%;
+}
+
+
+/*---------------------------/////////pagina das ongs individuais---------------------//////-------*/
+.main{
+    position: relative;
+    top:35px;
+    padding:0px;
+    margin: 0px;
+}
+.textong h2{
+    padding:0px;
+    margin:0px;
+}
+
+.container{
+    position: relative;
+    top:15px;
+    width:100%;
+    max-width: 520px;
+}
+
+.logo-ong{
+    width:100%;
+    max-width: 180px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+.ong-header{
+    width:100%;
+    max-width: 99%;
+}
+
+.description-ong{
+    width: 100%;
+}
+
+.description-ong h1{
+    width: 100%;
+    font-size: 20px;
+}
+
+.description-ong p{
+    font-size: 12px;
+}
+
+.ong-description{
+    width: 100%;
+    max-width:99%;
+}
+
+/*-----------------------------------PAGINA DE LOGIN---------------------------------*/
+
+.boxlogin{
+    position: relative;
+    left:0px;
+    transform: translateX(4%); 
+    width:100%;
+    max-width: 90%;
+    padding: 0px;
+    margin:0px;
+}
+
+/*-----------------------------------PAGINA DE CADASTRO----------------------------------------*/
+
+.cadastro3d {
+    position: relative;
+    top:50px;
+    width:100%;
+    max-width:85%;
+}
+
+    /*----------------------------------PAGINA PROFILE----------------------------*/
+
+    .containerprofile {
+        position: relative;
+        left:50px;
+        width:100%;
+        max-width: 70%;
+        height:100%;
+        
+    }
+    
+    .userdate{
+        position: relative;
+        left:75px;
+        top:40px;
+        width:100%;
+        max-width:60%;
+    }
+    
+    .infoaccount{
+        position: relative;
+        top:70px;
+        left:15px;
+        width: 100%;
+        max-width:90%;
+        height:800px;
+    }
+    
+    .barra {
+        width:100%;
+        max-width: 500px;
+    }
+    
+    .doacaohistorico {
+        position: relative;
+        width:100%;
+        max-width: 80%;
+        top:250px;
+        left:35px;
+    }
+    
+    .doacaopassada {
+        position:relative;
+        top:5px;
+        width:80%;
+        max-width:60%;
+        height:40%;
+        
+    }
+    .doacaopassada img{
+        width:100%;
+        max-width:100%;
+        height:100%;
+    }
+
+    .doacaopassada h5{
+        font-size: 13px;
+        text-align: baseline;
+        margin-left:10px;
+        
+    }
+
+    /*-----------------------------------PAGINA DE ANUNCIOS 1  E 2---------------------------------*/
+
+.anunciosmain {
+    position: relative;
+    top:5px;
+    left:1px;
+    width:95%;
+    height:2000px;
+}
+
+.anunciosmain2 {
+    position: relative;
+    top:5px;
+    left:1px;
+    width:95%;
+    height:2000px;
+}
+
+.botaoproxanterior{
+    position: absolute;
+    height:2%;
+    top:1980px;
+    left:200px;
+    text-align: center;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.botaoproxanterior h5{
+    margin: 0px;
+}
+.ads1 {
+    position:relative;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads1 img{
+    width:100%;
+    height:100%;
+}
+
+.ads2 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads2 img{
+    width:100%;
+    height:100%;
+}
+
+.ads3 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads3 img{
+    width:100%;
+    height:100%;
+}
+
+.ads4 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads4 img{
+    width:100%;
+    height:100%;
+}
+
+.ads5 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads5 img{
+    width:100%;
+    height:100%;
+}
+
+.ads6 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads6 img{
+    width:100%;
+    height:100%;
+}
+
+.ads7 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads7 img{
+    width:100%;
+    height:100%;
+}
+
+.ads8 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+.ads8 img{
+    width:100%;
+    height:100%;
+}
+
+.ads9 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads9 img{
+    width:100%;
+    height:100%;
+}
+
+.ads10 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads10 img{
+    width:100%;
+    height:100%;
+}
+
+.ads11 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads11 img{
+    width:100%;
+    height:100%;
+}
+
+.ads12 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads12 img{
+    width:100%;
+    height:100%;
+}
+
+.ads13 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads13 img{
+    width:100%;
+    height:100%;
+}
+
+.ads14 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads14 img{
+    width:100%;
+    height:100%;
+}
+
+.ads15 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads14 img{
+    width:100%;
+    height:100%;
+}
+
+.ads16 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads16 img{
+    width:100%;
+    height:100%;
+}
+
+.ads17 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads17 img{
+    width:100%;
+    height:100%;
+}
+
+.ads18 {
+    position:absolute;
+    left:5px;
+    width:45%;
+    height:5%;
+}
+
+.ads18 img{
+    width:100%;
+    height:100%;
+}
+
+.comment1 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment1 p{
+    text-align: center;
+    font-size: 9.5px;
+}
+
+.comment2 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment2 p{
+    text-align: center;
+    font-size: 9.5px;
+}
+
+.comment3 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment3 p{
+    text-align: center;
+    font-size: 9.5px;
+}
+
+.comment4 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment4 p{
+    text-align: center;
+    font-size: 9.5px;
+}
+
+.comment5 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment5 p{
+    text-align: center;
+    font-size: 8.5px;
+}
+
+.comment6 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment6 p{
+    text-align: center;
+    font-size: 7.1px;
+}
+
+.comment7 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment7 p{
+    text-align: center;
+    font-size: 10px;
+}
+
+.comment8 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment8 p{
+    text-align: center;
+    font-size: 10px;
+}
+
+.comment9 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:8%;
+    text-align: center;
+}
+
+.comment9 p{
+    text-align: center;
+    font-size: 8.3px;
+}
+
+.comment10 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment10 p{
+    text-align: center;
+    font-size: 10px;
+}
+
+.comment11 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment11 p{
+    text-align: center;
+    font-size: 8.2px;
+}
+
+.comment12 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment12 p{
+    text-align: center;
+    font-size: 7.5px;
+}
+
+.comment13 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment13 p{
+    text-align: center;
+    font-size: 9px;
+}
+
+.comment14 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment14 p{
+    text-align: center;
+    font-size: 10px;
+}
+
+.comment15 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment15 p{
+    text-align: center;
+    font-size: 10px;
+}
+
+.comment16 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment16 p{
+    text-align: center;
+    font-size: 9.5px;
+}
+
+.comment17 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:10%;
+    text-align: center;
+}
+
+.comment17 p{
+    text-align: center;
+    font-size: 8.2px;
+}
+
+.comment18 {
+    position: absolute;
+    left:155px;
+    width:50%;
+    height:8%;
+    text-align: center;
+}
+
+.comment18 p{
+    text-align: center;
+    font-size: 6px;
+}
+
+.doar1{
+    position:absolute;
+    top:150px;
+    left:70px;
+}
+
+.doar2{
+    position:absolute;
+    top:390px;
+    left:70px;
+}
+
+.doar3{
+    position:absolute;
+    top:625px;
+    left:70px;
+}
+
+.doar4{
+    position:absolute;
+    top:835px;
+    left:70px;
+}
+
+.doar5{
+    position:absolute;
+    top:1050px;
+    left:70px;
+}
+
+.doar6{
+    position:absolute;
+    top:1270px;
+    left:70px;
+}
+
+.doar7{
+    position:absolute;
+    top:1523px;
+    left:70px;
+}
+
+.doar8{
+    position:absolute;
+    top:1730px;
+    left:70px;
+}
+
+.doar9{
+    position:absolute;
+    top:1940px;
+    left:70px;
+}
+
+    /*-----------------------------------PAGINA DE FORMULARIO--------------------------------------------*/
+
+    .doacao-container{
+        position: relative;
+        top:20px;
+        width:100%;
+        max-width:80%;
+        left:0px;
+        transform: translateX(0%);
+    }
+
+    .doacao-submit {
+        position:relative;
+        left:50%;
+    }
+
+    .doacao-back{
+        top:508px;
+        left:20%;
+        height:38px;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    /*--------------------------------------------------PAGINA DE DOACAO FINALIZADA-----------------------------------------*/
+
+    .btn-success {
+        width:50%;
+        max-width: 100px;
+        height:100px;
+        margin:5px;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/*---------------------MEDIA QUERY EXTRA-----------------------*/
+
+@media only screen and (min-width:901px) and (max-width:1100px) {
+
+    header {
+        width:100%;
+    }
+    nav {
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .nav-list { 
+        width:100%;
+    }
+
+    /*-----------------------------------PAGINA INICIAL---------------------------------*/
+
+    .conteudobannerdiv p{
+        font-size: 20px;
+        }
+    
+    .bannerdiv p {
+        max-width: 400px;
+        }
+    .ad {
+    flex-direction: column;
+}
+    /*---------------------------/////////pagina das ongs individuais---------------------//////-------*/
+
+.container{
+    position: relative;
+    top:15px;
+    width:100%;
+}
+
+.textong h2{
+    padding:0px;
+    margin:0px;
+    text-align: center;
+}
+
+.ong-header{
+    width:100%;
+}
+
+.description-ong{
+    width: 100%;
+}
+
+.description-ong h1{
+    width: 100%;
+}
+
+.description-ong p{
+    font-size: 15px;
+}
+
+.ong-description{
+    width: 100%;
+}
+
+/*-------------------------------------------------------PAGINA DO FAQ--------------------------------------------------------------*/
+
+.faqsessao1{
+    position: relative;
+    top:25px;
+}
+
+/*-----------------------------------PAGINA DE LOGIN---------------------------------*/
+
+.boxlogin{
+    position: relative;
+    left:0px;
+    transform: translateX(12%); 
+    width:100%;
+    padding: 0px;
+    margin:0px;
+}
+
+/*--------------------------------------/////////FOOTER/////------------*/
+.rodape {
+    width:100%;
+    
+}
+
+/*----------------------------------PAGINA PROFILE----------------------------*/
+
+.containerprofile {
+    position: relative;
+    left:20px;
+}
+
+.userdate{
+    position: relative;
+    left:20px;
+}
+
+.infoaccount{
+    position: relative;
+    left:250px;
+    width: 100%;
+    max-width:68%;
+    height:650px;
+}
+
+.barra {
+    width:100%;
+    max-width: 600px;
+}
+
+.doacaohistorico {
+    position: absolute;
+    top:250px;
+    left:20px;
+}
+
+.doacaopassada h5{
+    font-size: 13px;
+    text-align: baseline;
+    margin-left:30px;
+    margin-top:10px;
+}
+
+/*-----------------------------------PAGINA DE ANUNCIOS 1  E 2---------------------------------*/
+
+.anunciosmain {
+    position: relative;
+    top:25px;
+    left:2px;
+    width:90%;
+}
+
+.anunciosmain2 {
+    position: relative;
+    top:25px;
+    left:2px;
+    width:90%;
+}
+
+.botaoproxanterior{
+    position: absolute;
+    left:650px;
+}
+
+.ads1 {
+    position:relative;
+    left:50px;
+    width:100%;
+}
+
+.ads2 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads3 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads4 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads5 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads6 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads7 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads8 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads9 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads10 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads11 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads12 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads13 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads14 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads15 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads16 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads17 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.ads18 {
+    position:absolute;
+    left:50px;
+    width:100%;
+}
+
+.comment1 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment2 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment3 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment4 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment5 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment6 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment7 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment8 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment9 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment10 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment11 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment12 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment13 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment14 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+
+.comment15 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment16 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment17 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.comment18 {
+    position: absolute;
+    left:270px;
+    width:100%;
+}
+
+.doar1{
+    position:absolute;
+    top:175px;
+    left:800px;
+}
+
+.doar2{
+    position:absolute;
+    top:385px;
+    left:800px;
+}
+
+.doar3{
+    position:absolute;
+    top:625px;
+    left:800px;
+}
+
+.doar4{
+    position:absolute;
+    top:845px;
+    left:800px;
+}
+
+.doar5{
+    position:absolute;
+    top:1080px;
+    left:800px;
+}
+
+.doar6{
+    position:absolute;
+    top:1300px;
+    left:800px;
+}
+
+.doar7{
+    position:absolute;
+    top:1540px;
+    left:800px;
+}
+
+.doar8{
+    position:absolute;
+    top:1760px;
+    left:800px;
+}
+
+.doar9{
+    position:absolute;
+    top:1980px;
+    left:800px;
+}
+
+    /*-----------------------------------PAGINA DE FORMULARIO--------------------------------------------*/
+
+.doacao-container{
+    width:100%;
+    max-width:80%;
+    left:0px;
+    transform: translateX(8%);
+}
+
+.doacao-submit {
+    position:relative;
+    top:0px;
+    left:50%;
+    width:15%;
+    height:38px;
+    text-align: center;
+}
+
+.doacao-back{
+    top:478px;
+    left:25%;
+    width:15%;
+    height:38px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+}
+
+/*-----------------------------------------------------MEDIA QUERY EXTRA PROFILE PAGE 700WIDTH-------------------------*/
+
+@media only screen and (min-width:600px) and (max-width:775px){
+    /*----------------------------------PAGINA PROFILE----------------------------*/
+
+.containerprofile {
+    position: relative;
+    left:20px;
+}
+
+.userdate{
+    position: relative;
+    left:20px;
+}
+
+.infoaccount{
+    position: relative;
+    left:240px;
+    width: 100%;
+    max-width:54%;
+    height:650px;
+}
+
+.barra {
+    width:100%;
+    max-width: 500px;
+}
+
+.doacaohistorico {
+    position: absolute;
+    width:100%;
+    max-width: 90%;
+    top:250px;
+    left:20px;
+}
+
+.doacaopassada {
+    width:100%;
+    max-width:80%;
+}
+}
+
+/*-----------/////////---------ULTIMO MEDIA QUERY --------------///////////////-------*/
+
+@media only screen and (min-width:0px) and (max-width:300px){
+    header {
+       width:100%;
+       height:266px;
+   }
+   nav {
+       flex-direction: column;
+       justify-content: space-around;
+       position: relative;
+       top: 0;
+       left: 0;
+   }
+
+   .nav-list { 
+       width:100%;
+       flex-direction: column;
+       padding: 0px;
+   }
+
+   /*-----------------------------------PAGINA INICIAL---------------------------------*/
+
+   .conteudobannerdiv p{
+    font-size: 12px;
+    }
+
+    .bannerdiv p {
+    max-width: 200px;
+    font-size: 15px;
+    }
+
+   .ad {
+       flex-direction: column;
+   }
+
+   /*--------------------------------------/////////FOOTER/////------------*/
+   .rodape {
+       width:100%;
+       
+   }
+
+   .rodapebox {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+  
+
+   /*------------------------- QUEM SOMOS --------------------------*/
+
+
+.caixasobre {
+    display: flex;
+    flex-direction: column;
+}
+
+.caixasobre div{
+    width: 100%;
+}
+
+/*----------------------------------PAGINA PROFILE----------------------------*/
+
+.containerprofile {
+    position: relative;
+    top:25px;
+    left:35px;
+    width:100%;
+    max-width: 70%;
+    height:100%;
+    
+}
+
+.userdate{
+    position: relative;
+    left:50px;
+    top:40px;
+    width:100%;
+    max-width:60%;
+}
+
+.infoaccount{
+    position: relative;
+    top:70px;
+    left:15px;
+    width: 100%;
+    max-width:90%;
+    height:800px;
+}
+
+.accnome{
+    width:80%;
+}
+
+.accemail{
+    width:80%;
+}
+
+.accemail h4{
+    font-size: 11.7px;
+}
+
+.acctel{
+    width:80%;
+}
+
+.barra {
+    width:100%;
+    max-width: 500px;
+}
+
+
+.doacaohistorico {
+    position: relative;
+    width:100%;
+    max-width: 80%;
+    top:250px;
+    left:25px;
+}
+
+.doacaopassada {
+    position:relative;
+    top:5px;
+    width:80%;
+    max-width:60%;
+    height:40%;
+    
+}
+.doacaopassada img{
+    width:100%;
+    max-width:100%;
+    height:100%;
+}
+
+.doacaopassada h5{
+    font-size: 13px;
+    text-align: baseline;
+    margin-left:10px;
+    margin-top:0px;
+    
+}
+
+/*-----------------------------------PAGINA DE LOGIN---------------------------------*/
+
+.boxlogin{
+    position: relative;
+    left:0px;
+    transform: translateX(4%); 
+    width:100%;
+    max-width: 90%;
+    padding: 0px;
+    margin:0px;
+}
+
+/*-----------------------------------PAGINA DE CADASTRO----------------------------------------*/
+
+.cadastro3d {
+    position: relative;
+    top:50px;
+    width:100%;
+    max-width:85%;
+}
+}
